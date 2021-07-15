@@ -6,14 +6,22 @@ public class Main {
 
     public static void main(String[] args) {
 
-        displayHighScorePosition("Fred", 4000);
+        int highScorePosition = calculateHighScorePosition(1500);
+        displayHighScorePosition("Fred", highScorePosition);
 
+        highScorePosition = calculateHighScorePosition(900);
+        displayHighScorePosition("Bob", highScorePosition);
+
+        highScorePosition = calculateHighScorePosition(400);
+        displayHighScorePosition("Percy", highScorePosition);
+
+        highScorePosition = calculateHighScorePosition(50);
+        displayHighScorePosition("Ted", highScorePosition);
     }
 
     public static void displayHighScorePosition(String playersName, int highScorePosition) {
 
-        int position = calculateHighScorePosition(highScorePosition);
-        System.out.println(playersName + " managed to get into position " + position + " on the high score table.");
+        System.out.println(playersName + " managed to get into position " + highScorePosition + " on the high score table.");
 
     }
 
